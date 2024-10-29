@@ -3,12 +3,15 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { api } from "../../services/api";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 import { Container, Form, InputContairner, LeftContainer, RightContainer, Title, Link } from "./styles";
 import { Button } from "../../components/Button";
 import Logo from "../../assets/logo-dev-burger.svg";
 
 export function Register() {
+  const navigate = useNavigate();
+
   const schema = yup
     .object({
       name: yup.string().required("O nome é obrigatório"),
@@ -44,14 +47,17 @@ export function Register() {
       );
 
       if (status === 200 || status === 201) {
+        setTimeout(()=>{
+          navigate("/login")
+        }, 2000)
         toast.success("Cadastro realizado com sucesso");
       } else if (status === 409) {
         toast.error("Email já cadastrado! Faça login para  continuar!");
       } else {
-        throw new Error()
+        throw new Error();
       }
-    } catch  (error) {
-      toast.error("😭 Falha no Sistema! Tente novamente")
+    } catch (error) {
+      toast.error("😭 Falha no Sistema! Tente novamente");
     }
   };
 
