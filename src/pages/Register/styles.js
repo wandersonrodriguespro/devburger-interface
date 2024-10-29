@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import BackgroundLogin from '../../assets/bg-login.svg';
-import Background from '../../assets/background.svg';
-import { Link as  ReactLink } from 'react-router-dom';
+import styled from "styled-components";
+import BackgroundLogin from "../../assets/bg-login.svg";
+import Background from "../../assets/background.svg";
+import { Link as ReactLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -53,17 +53,12 @@ export const RightContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family: 'Road Rage', sans-serif;
-  color: #fff;
+  font-family: "Road Rage", sans-serif;
+  color: #9758a6;
   text-align: center;
   font-size: 40px;
   font-weight: 400;
   line-height: 100%;
-  
-  span {
-    font-family: 'Road Rage', sans-serif;
-    color: #9758a6;
-  }
 `;
 
 export const Form = styled.form`
@@ -95,14 +90,15 @@ export const InputContairner = styled.div`
     font-family: Poppins;
   }
 
-  p{
+  p {
     font-size: 14px;
-    line-height:80%;
+    line-height: 80%;
     color: #cf3057;
     font-weight: 600;
     height: 10px;
   }
 `;
+
  export const Link = styled(ReactLink)`
  text-decoration: none;
  color: #fff
