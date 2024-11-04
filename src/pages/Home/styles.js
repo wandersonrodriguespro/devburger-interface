@@ -26,7 +26,4 @@ background: linear-gradient(
     rgba(255,255,255, 0.8)
     ),
     url('${Background}');
-height: 550px;
 `;
-
-export const Content = styled.div``;
